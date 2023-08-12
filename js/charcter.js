@@ -11,3 +11,12 @@ mode1.addEventListener("click", ()=>{
 mode2.addEventListener("click", ()=>{
     mode.classList.remove("active")
 })
+
+
+fetch("https://type.fit/api/quotes")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    console.log(data);
+  });
